@@ -10,10 +10,10 @@
           <a class="nav-link nav-linkn active" href="/products/all">Products</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link nav-linkn active" id="#about" href="#">About</a>
+          <a class="nav-link nav-linkn active" href="/about" href="#">About</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link nav-linkn active" id="#contact" href="#">Contact</a>
+          <a class="nav-link nav-linkn active" href="/contact" href="#">Contact</a>
         </li>        
       </ul>
 

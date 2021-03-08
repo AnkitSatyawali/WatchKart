@@ -66,12 +66,13 @@
     <div class="productsc">
     @foreach($trending as $trend)
       <div class="product_list">
-      <a class="remove_link_color" href="/product/{{$trend['id']}}">
-          <div class="product">
+        <div class="product">
+          <a class="remove_link_color" href="/product/{{$trend['id']}}">
             <div class="product_img_div">
               <img class="product_img" src="{{$trend['image1']}}" >
               <div class="wishicon">&#10084;	</div>
             </div>
+          </a>
             <div id="pname" class="product_name">{{$trend['name']}}</div>
               <div class="rating">
               </div>
@@ -81,7 +82,6 @@
                 <button onclick="addToCart({{$trend}},{{Auth::user()}})" class="add_cart_btn">Add To Cart</button>
               </div>
             </div>
-      </a>
           </div>
           @endforeach
       </div>
@@ -94,12 +94,13 @@
     <div class="productsc">
     @foreach($newLaunch as $launch)
       <div class="product_list">
-      <a class="remove_link_color" href="/product/{{$launch['id']}}">
-          <div class="product">
+        <div class="product">
+          <a class="remove_link_color" href="/product/{{$launch['id']}}">
             <div class="product_img_div">
               <img class="product_img" src="{{$launch['image1']}}" >
               <div class="wishicon">&#10084;	</div>
             </div>
+          </a>
             <div class="product_name">{{$launch['name']}}</div>
               <div class="rating">
               </div>
@@ -108,8 +109,8 @@
                 <meta name="csrf_token" content="{{ csrf_token() }}" />
                 <button onclick="addToCart({{$trend}},{{Auth::user()}})" class="add_cart_btn">Add To Cart</button>
               </div>
-            </div>
-        </a>
+        </div>
+        
           </div>
           @endforeach
       </div>
@@ -122,12 +123,13 @@
     <div class="productsc">
     @foreach($bestSellers as $best)
       <div class="product_list">
-        <a class="remove_link_color" href="/product/{{$best['id']}}">
-          <div class="product">
+        <div class="product">
+          <a class="remove_link_color" href="/product/{{$best['id']}}">
             <div class="product_img_div">
               <img class="product_img" src="{{$best['image1']}}" >
               <div class="wishicon">&#10084;	</div>
             </div>
+          </a>
             <div class="product_name">{{$best['name']}}</div>
               <div class="rating">
               </div>
@@ -137,7 +139,6 @@
                 <button onclick="addToCart({{$trend}},{{Auth::user()}})" class="add_cart_btn">Add To Cart</button>
               </div>
             </div>
-            </a>
           </div>
           @endforeach
       </div>
@@ -151,7 +152,7 @@
               <div class="review">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
               <div class="user_image_div">
               <div class="user_img_div">
-                <img class="user_img" src="{{$trend['image1']}}" >
+                <img class="user_img" src="/images/avatar.svg" >
               </div>
               <div class="user_name">Ankit Satyawali</div>
               </div>
@@ -164,7 +165,7 @@
               <div class="review">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
               <div class="user_image_div">
               <div class="user_img_div">
-                <img class="user_img" src="{{$trend['image1']}}" >
+                <img class="user_img" src="/images/avatar.svg" >
               </div>
               <div class="user_name">Ankit Satyawali</div>
               </div>
@@ -177,7 +178,7 @@
               <div class="review">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
               <div class="user_image_div">
               <div class="user_img_div">
-                <img class="user_img" src="{{$trend['image1']}}" >
+                <img class="user_img" src="/images/avatar.svg" >
               </div>
               <div class="user_name">Ankit Satyawali</div>
               </div>

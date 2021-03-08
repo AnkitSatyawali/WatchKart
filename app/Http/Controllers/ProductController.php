@@ -21,7 +21,9 @@ class ProductController extends Controller
             $fields= explode('&',$tag);
             $products = array();
             if(count($fields)==2)
-            $products = Products::where($fields[0],$fields[1])->paginate(10);
+            {
+                $products = Products::where($fields[0],$fields[1])->paginate(10);
+            }
             return view('pages.products',compact('products'));
         }
     }

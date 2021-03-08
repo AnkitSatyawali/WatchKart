@@ -39,7 +39,8 @@ class ResetPasswordController extends Controller
         $token = explode('&',($tokenemail))[0];
         $email = explode('&',($tokenemail))[1];
         $record = PasswordReset::where('token',$token)->first();
-        if(!$record){
+        if(!$record)
+        {
             return redirect('/pagenotfound');
         }
         $presentDay = Carbon::now()->toDateTimeString();

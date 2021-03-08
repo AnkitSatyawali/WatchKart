@@ -39,9 +39,13 @@ function changeImg(i)
     document.getElementById('main_img').src = document.getElementById(i).src;
     var x = "#"+i;
     if(i=='image1')
-    $('#image2').removeClass('image_active');
+    {
+        $('#image2').removeClass('image_active');
+    }
     else if(i=='image2')
-    $('#image1').removeClass('image_active');
+    {
+        $('#image1').removeClass('image_active');
+    }
     $(x).addClass('image_active');
 }
 function addToCart(product,user){
@@ -82,7 +86,9 @@ function addToCart(product,user){
         });
     }
     else
-    window.location.href="http://127.0.0.1:8000/login";
+    {
+        window.location.href="http://127.0.0.1:8000/login";
+    }
 }
 
 

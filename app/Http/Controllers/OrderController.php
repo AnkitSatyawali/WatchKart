@@ -36,17 +36,24 @@ class OrderController extends Controller
         $products = Cart::where('user_id',Auth::user()->id)->get();
         // dd($result);
         if($result && count($products)>0)
-        return view('pages.payment',compact('result'));
+        {
+            return view('pages.payment',compact('result'));
+        }
         else if(count($products)==0)
-        return redirect('/userCart');
+        {
+            return redirect('/userCart');
+        }
         else
-        return redirect('/saveAddress');
+        {
+            return redirect('/saveAddress');
+        }
     }
 
     public function store(Request $req){
         // dd($req->input());
         $orderid = $this->bookOrder($req->input('option'));
         $this->saveProductDetails($orderid);
+        session()->flash('message','Order booked successfully');
         return redirect('/orderslist');
         // $this->emptyCart();
     }
@@ -57,7 +64,8 @@ class OrderController extends Controller
         $totalcost = 0;
         $gst = 0;
         $grandTotal = 0;
-        foreach($products as $product){
+        foreach($products as $product)
+        {
             $totalCost = $product['quantity'] * $product['cost'];
             $product['cost'] = $totalCost;
             $grandTotal = $grandTotal + $totalCost;
@@ -79,7 +87,8 @@ class OrderController extends Controller
     public function saveProductDetails($orderid){
         $products = Cart::where('user_id',Auth::user()->id)->get();
         // dd($products);
-        foreach($products as $product){
+        foreach($products as $product)
+        {
             $totalCost = $product['quantity'] * $product['cost'];
 
             Order_product::create([

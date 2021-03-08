@@ -54,7 +54,8 @@ class RegistrationController extends Controller
         ]);
         // dd($email);
         $user = User::where('email',$email)->first();
-        if(!$user){
+        if(!$user)
+        {
             return redirect('/');
         }
 

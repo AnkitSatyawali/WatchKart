@@ -60,3 +60,11 @@ Route::get('/order/{id}','OrderController@show');
 Route::get('/cancelOrder/{id}','OrderController@cancelOrder');
 
 Route::get('/profile','UserController@index');
+
+Route::get('/about',function(){
+    return view('pages.about');
+});
+
+Route::get('/contact',function(){
+    return view('pages.contact');
+});

@@ -72,34 +72,34 @@
     @if(count($products)>0)
     <div class="products_listing">
         @foreach($products as $product)
-        <a class="remove_link_color" href="/product/{{$product['id']}}">
-        <div class="product_card">
-            <div class="productlist_image_div">
-                <img class="productlist_img" src="{{$product['image1']}}">
-            </div>
-            <div class="product_detail_div">
-                <div class="wishiconn">&#10084;	</div>
-                <div class="product_detail">
-                    <div class="detail_name">{{$product['name']}}</div>
-                    <ul class="other_details">
-                        <li>{{$product['type']}}</li>
-                        <li>Launched on {{$product['launchDate']}}</li>
-                        <li>Brand Name : {{$product['brand']}}</li>
-                        <li>{{$product['occassion']}}</li>
-                        <li>Water Resistant : {{$product['isWaterResistant']}}</li>
-                        <li>{{$product['display']}}</li>
-                        <li>Warranty : {{$product['warratyPeriod']}}</li>
-                    </ul>
+            <a class="remove_link_color" href="/product/{{$product['id']}}">
+                <div class="product_card">
+                    <div class="productlist_image_div">
+                        <img class="productlist_img" src="{{$product['image1']}}">
+                    </div>
+                    <div class="product_detail_div">
+                        <div class="wishiconn">&#10084;	</div>
+                        <div class="product_detail">
+                            <div class="detail_name">{{$product['name']}}</div>
+                            <ul class="other_details">
+                                <li>{{$product['type']}}</li>
+                                <li>Launched on {{$product['launchDate']}}</li>
+                                <li>Brand Name : {{$product['brand']}}</li>
+                                <li>{{$product['occassion']}}</li>
+                                <li>Water Resistant : {{$product['isWaterResistant']}}</li>
+                                <li>{{$product['display']}}</li>
+                                <li>Warranty : {{$product['warratyPeriod']}}</li>
+                            </ul>
+                        </div>
+                        <div class="cost_detail">
+                            <h2>₹ {{$product['cost']}}</h2>
+                            <h4>{{$product['discount']}}% Discount</h4>
+                            <p>No cost Emi</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="cost_detail">
-                    <h2>₹ {{$product['cost']}}</h2>
-                    <h4>{{$product['discount']}}% Discount</h4>
-                    <p>No cost Emi</p>
-                </div>
-            </div>
-        </div>
-        </a>
-    @endforeach
+            </a>
+        @endforeach
     <div class="pagination_links">
         <div class="pagination_links_inner">{{$products->links()}}</div>
     </div>

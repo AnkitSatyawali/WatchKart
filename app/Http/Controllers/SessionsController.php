@@ -26,9 +26,11 @@ class SessionsController extends Controller
         // $user = User::find($request->input('email'));
         // dd($user);
         if(!auth()->attempt(request(['email','password'])))
-        return back()->withErrors([
-            'message' => 'Please check your credentionals'
-        ]);
+        {
+            return back()->withErrors([
+                'message' => 'Please check your credentionals'
+            ]);
+        }
         return redirect('/');
         // return view('session.create');
     }

@@ -16,6 +16,7 @@ class CartController extends Controller
     public function __construct(){
         $this->middleware('auth');
     }
+
     public function index(){
         $products = Cart::where('user_id',Auth::user()->id)->get();
         // dd($products);
@@ -42,15 +43,21 @@ class CartController extends Controller
             $result->save();
             $prod['quantity'] = $prod['quantity']-1;
         }
-        else{
-            if($prod->quantity>0){
-            Cart::create([
-                'name'=>$req->input('name'),
-                'cost'=>$req->input('cost'),
-                'user_id'=>(Auth::user()->id),
-                'product_id'=>$req->input('product_id'),
-            ]);
-            $prod['quantity'] = $prod['quantity']-1;
+        else
+        {
+            if($prod->quantity>0)
+            {
+                Cart::create([
+                    'name'=>$req->input('name'),
+                    'cost'=>$req->input('cost'),
+                    'user_id'=>(Auth::user()->id),
+                    'product_id'=>$req->input('product_id'),
+                ]);
+                $prod['quantity'] = $prod['quantity']-1;
+            }
+            else
+            {
+                return Response::json(['success' => false,'data'=>$result], 410);
             }
         }
         
@@ -69,7 +76,8 @@ class CartController extends Controller
             $result['quantity']=$result['quantity']-1;
             $result->save();
         }
-        else{
+        else
+        {
             $result->delete();
         }
         $prod['quantity'] = $prod['quantity']-1;

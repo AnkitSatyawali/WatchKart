@@ -1,6 +1,8 @@
 <!doctype html>
 <html lang="{{ app()->getLocale() }}">
+
     <head>
+
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -28,21 +30,23 @@
         <link href="/css/styles.css" rel="stylesheet" type="text/css">
         <link href="/css/register.css" rel="stylesheet" type="text/css">
 
-       
     </head>
+
     <body>
-    @include('layouts.nav')
-    @if(session('message'))
-    <div class="alert alert-success animate__animated animate__fadeInUp" id="#alerti">
-        {{session('message')}}
-    </div>
-    @endif
-    @yield('content')
 
-    @include('layouts.footer')    
+        @include('layouts.nav')
+        
+        @if(session('message'))
+        <div class="alert alert-success animate__animated animate__fadeInUp" id="#alerti">
+            {{session('message')}}
+        </div>
+        @endif
+        
+        @yield('content')
 
-    <!--Jquery-->
-    
-    <script src="/js/product.js"></script>
+        @include('layouts.footer')    
+
+        
+        <script src="/js/product.js"></script>
     </body>
 </html>
