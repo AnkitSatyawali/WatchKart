@@ -34,6 +34,13 @@
 //     }
 // });
 
+$(document).ready(function(){
+    setTimeout(function() {
+        $('#alerti').fadeOut('fast');
+    }, 30000);
+});
+
+
 function changeImg(i)
 {
     document.getElementById('main_img').src = document.getElementById(i).src;

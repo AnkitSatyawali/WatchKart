@@ -31,6 +31,8 @@ class SessionsController extends Controller
                 'message' => 'Please check your credentionals'
             ]);
         }
+
+        session()->flash('message','You logged in successfully');
         return redirect('/');
         // return view('session.create');
     }

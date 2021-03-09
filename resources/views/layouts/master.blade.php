@@ -35,13 +35,14 @@
     <body>
 
         @include('layouts.nav')
-        
+
         @if(session('message'))
-        <div class="alert alert-success animate__animated animate__fadeInUp" id="#alerti">
+        <div class="alert alert-success alert-dismissible animate__animated animate__fadeInUp" id="#alerti">
             {{session('message')}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
         </div>
         @endif
-        
+
         @yield('content')
 
         @include('layouts.footer')    

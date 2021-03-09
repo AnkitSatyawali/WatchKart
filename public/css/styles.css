@@ -127,6 +127,7 @@ body {
     width:80%;
     height: 18rem;
     display: flex;
+    padding-right:1rem;
     border-radius: 2rem;
     box-shadow: 1px 3px 14px 0px lightgrey;
     -webkit-box-shadow: 1px 3px 14px 0px lightgrey;
@@ -815,7 +816,7 @@ a:focus{
     position: fixed;
     z-index:10;
     bottom:30px;
-    right:45%;
+    right:30px;
 }
 .alert_display{
     display:block;
@@ -879,4 +880,123 @@ a:focus{
     box-shadow: 13px 14px 0px lightgrey;
     -webkit-box-shadow: 1px 3px 14px 0px lightgrey;
     -moz-box-shadow: 1px 3px 14px 0px lightgrey;
+}
+.notFound_order{
+    padding-top:3rem;
+    /* font-weight: bold; */ 
+}
+.notFound_order_text{
+    padding-top:3rem;
+    font-weight: bold;
+    font-family:poppins;
+}
+
+/*Responsive design */
+@media only screen and (max-width: 1100px) {
+    .product_list{
+      width:100%;
+    }
+    .thirdPart{
+        padding:1.5rem;
+    }
+    .prod_img_div{
+        display: none;
+    }
+    .prod_caption{
+        margin:0px auto;
+    }
+    .products{
+        padding-right: 0;
+    }
+    .product_options{
+        display: none;
+    }
+    .products_listing{
+        width:100%
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .row{
+        --bs-gutter-x: 0 !important;
+    }
+    .wishicon{
+      display: none;
+    }
+    .responsive_col{
+        flex:none !important;
+        border-bottom: 2rem solid white;
+    }
+    .products{
+        height:22rem;
+        display: block;
+    }
+    .prod_img_div{
+        height:14rem;
+        width:100%;
+        display: block;
+    }
+    .prod_caption{
+        transform: none;
+    }
+    .productsc{
+     display: block;
+    }
+    .testimonial_col{
+        width:100%;
+    }
+    .fourthPart{
+        padding: 1.5rem;
+        padding-bottom: 2.5rem;
+    }
+    .product_card{
+        display: block;
+        padding:1rem;
+    }
+    .productlist_image_div{
+        width:100%;
+    }
+    .product_detail_div{
+        display: block;
+        width:100%;
+    }
+    .wishiconn{
+        display: none;
+    }
+    .product_detail{
+        width:100%;
+    }
+    .other_details{
+        display: none;
+    }
+    .cost_detail{
+        padding-left: 1.5rem;
+    }
+    .cart_main{
+        font-size: 3vw;
+    }
+    .orders_main{
+        font-size: 2vw;
+    }
+    .payment-table{
+        width:100%;
+    }
+    .paymentmethod-table{
+        width:100%;
+    }
+    .profile_main{
+        padding:1.5rem;
+    }
+    .profile_image_div{
+        display: none;
+    }
+    .profile_detail{
+        width:100%;
+    }
+}
+
+@media only screen and (max-width: 383px) {
+    .wishicon{
+      display: none;
+    }
 }

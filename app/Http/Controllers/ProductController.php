@@ -12,7 +12,7 @@ class ProductController extends Controller
     {
         if($tag=="all")
         {
-            $products = Products::paginate(10);
+            $products = Products::paginate(5);
             // dd($products);
             return view('pages.products',compact('products'));
         }
@@ -22,7 +22,7 @@ class ProductController extends Controller
             $products = array();
             if(count($fields)==2)
             {
-                $products = Products::where($fields[0],$fields[1])->paginate(10);
+                $products = Products::where($fields[0],$fields[1])->paginate(5);
             }
             return view('pages.products',compact('products'));
         }

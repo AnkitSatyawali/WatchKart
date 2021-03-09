@@ -36,7 +36,7 @@
 
 <div class="conatiner secondPart">
     <div class="row align-items-start">
-        <div class="col">
+        <div class="col responsive_col">
             <div class="products">
                 <div class="prod_img_div"><img class="prod_img" src="/images/smartband.jpg"></div>
                 <div class="prod_caption">
@@ -46,7 +46,7 @@
                 </div>
             </div>
         </div>
-        <div class="col">
+        <div class="col responsive_col">
             <div class=products>
                 <div class="prod_img_div wrst_img"><img class="prod_img" src="/images/watch.jpg"></div>
                 <div class="prod_caption">

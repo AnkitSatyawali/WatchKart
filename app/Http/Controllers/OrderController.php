@@ -54,7 +54,10 @@ class OrderController extends Controller
         $orderid = $this->bookOrder($req->input('option'));
         $this->saveProductDetails($orderid);
         session()->flash('message','Order booked successfully');
-        return redirect('/orderslist');
+        return redirect('orderslist');
+        // $orders = Order::where('user_id',Auth::user()->id)->latest()->paginate(7);
+        // dd($orders);
+        // return view('pages.orders',compact('orders'));
         // $this->emptyCart();
     }
 
@@ -108,7 +111,8 @@ class OrderController extends Controller
         $order->status = 'cancelled';
         $order->save();
         // dd($products);
-        return back();
+        session()->flash('message',"Order Cancelled Successfully");
+        return redirect()->back();
     }
 
 }

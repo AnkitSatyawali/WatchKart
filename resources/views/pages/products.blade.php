@@ -50,8 +50,8 @@
         </div>
         <div class="collapse collapsen" id="collapse4">
                 <ul>
-                    <li>Women</li>
-                    <li>Men</li>
+                    <li><a class="nolistyle" href="/products/gender&women">Women</a></li>
+                    <li><a class="nolistyle" href="/products/gender&men">Men</a></li>
                 </ul>
         </div>
 

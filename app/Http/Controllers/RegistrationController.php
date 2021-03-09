@@ -43,9 +43,9 @@ class RegistrationController extends Controller
             // dd($user);
         auth()->login($user);
         
-        session('message','You have registered successfuly');
+        session()->flash('message','You have registered successfuly');
             
-        return redirect()->home();
+        return redirect('/');
     }
 
     public function changePassword($email,Request $req){

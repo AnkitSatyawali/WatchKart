@@ -49,6 +49,7 @@ class AddressController extends Controller
                 'country'=>$req->input('country'),
                 'zipcode'=>$req->input('zip')
             ]);
+            session()->flash('message','Address saved successfully now you can checkout');
             return redirect('/userCart');
         }
     }
